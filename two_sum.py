@@ -28,7 +28,7 @@ def add_two(array, target):
 def main():
     array = input("Please enter array: ")
     array = array.split(',')
-    [int(number) for number in array]
+    array = [int(number) for number in array]
     target = int(input("Please enter target number: "))
     print(add_two(array, target))
 
