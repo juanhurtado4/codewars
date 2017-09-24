@@ -16,7 +16,10 @@ def add_two(array, target):
     target number.
     Returns tuple of indexes.
     '''
-    for index, each in enumerate(array):
+
+    for each in array:
+        if each >= target: # Skips any number that is bigger than the target
+            continue
         for second_index, second_each in enumerate(array):
             if second_index == 0:
                 continue
@@ -26,6 +29,11 @@ def add_two(array, target):
 
 
 def main():
+    '''
+    Runs program. Ask user for an array (each value seperated by commas) and a
+    whole number.
+    Returns tuple of the two indexes.
+    '''
     array = input("Please enter array: ")
     array = array.split(',')
     array = [int(number) for number in array]
