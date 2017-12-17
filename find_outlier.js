@@ -2,25 +2,26 @@
 
 function findOutlier(integers) {
     //your code here
-    let even = true;
+    let even = 0;
+    let odd = 0;
     let currentInteger;
 
     for (let i = 0; i < 3; i++) {
-        currentInteger = integers[i]
-        if (currentInteger % 2 === 0) {
-            even = true;
+        currentInteger = integers[i];
+        if (currentInteger === 0 || currentInteger % 2 === 0) {
+            even += 1
         } else {
-            even = false;
+            odd += 1
         }
     }
 
-    if (even) {
+    if (even > odd) {
         for (let i = 0; i < integers.length; i++) {
             currentInteger = integers[i]
             if (currentInteger === 0) {
                 continue
             }
-            if (currentInteger % 3 === 0) {
+            if (currentInteger % 2 !== 0) {
                 return currentInteger;
             }
         }
