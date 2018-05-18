@@ -1,0 +1,16 @@
+
+const longestConsec = (arr, num) => {
+  if (arr.length < 1) { return '' }
+  const longestItems = {};
+  arr.forEach(item => {
+    longestItems[item] = item.length
+  });
+  return longestItems;
+};
+  
+console.log(longestConsec(['h', 'hi', 'hello'], 1));
+
+
+// ['h', 'hi', 'hello', 1] = 'hello'
+// ['h', 'hi', 'hello', 2] = 'hihello'
+// ['hello', 'hi', 'h', 2] = 'hellohi'
