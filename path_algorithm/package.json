@@ -1,0 +1,19 @@
+{
+  "name": "path_algorithm",
+  "version": "1.0.0",
+  "description": "A React implementation of path algorithm",
+  "main": "app.js",
+  "scripts": {
+    "run-babel": "babel src/app.js --out-file=public/app.js --presets=env,react --watch",
+    "live-reload": "live-server public",
+    "start": "npm-run-all -p run-babel live-reload"
+  },
+  "author": "Juan Hurtado",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "npm-run-all": "^4.1.3"
+  }
+}
