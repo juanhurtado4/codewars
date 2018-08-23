@@ -1,0 +1,6 @@
+`Given an array return the number that appears odd number of times
+Note: Only one item in the array will fit the description
+Example: [1, 2, 2, 3, 3]
+Returns: 1
+`
+const findOdd = (arr) => arr.reduce((result, curr) => result ^ curr);
