@@ -21,9 +21,10 @@ const getAlphaStart = asciiValue => {
 
 const rotate = (char, key) => {
     const asciiValue = char.charCodeAt();
-    const lettersInAlpha = 26;
     const alphaStart = getAlphaStart(asciiValue);
-    const encodedIndex = ( asciiValue + key ) % lettersInAlpha + alphaStart;
+    const charAlphaIndex = asciiValue - alphaStart;
+    const lettersInAlpha = 26;
+    const encodedIndex = ( charAlphaIndex + key ) % lettersInAlpha + alphaStart;
 
     // Get string from ascii value
     return String.fromCharCode(encodedIndex);
